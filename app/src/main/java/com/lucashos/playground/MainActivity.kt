@@ -1,22 +1,11 @@
 package com.lucashos.playground
 
-import android.content.Context
+import android.graphics.Rect
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.GestureDetector
-import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 import kotlinx.android.synthetic.main.activity_main.*
-import android.R.attr.bottom
-import android.R.attr.top
-import android.graphics.Rect
-import androidx.core.app.ComponentActivity
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun moveImage(scrollValue: Int) {
-        val dimensionsBias = this.scrollView.bottom.toFloat() / this.scrollView.right.toFloat()
+        val dimensionsBias = this.scrollView.right.toFloat() / this.scrollView.bottom.toFloat()
         var targetPosition = this.image.x + (scrollValue.toFloat() * dimensionsBias)
         if (targetPosition < 0) targetPosition = 0f
         if (targetPosition + this.image.width > this.scrollView.right) targetPosition = this.scrollView.right.toFloat() - this.image.width
