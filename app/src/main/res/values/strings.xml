@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">playground</string>
+    <string name="lorem_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed.</string>
+    <string name="lorem_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis erat eget nisl pellentesque, sed.</string>
+    <string name="lorem_m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius magna eu nisi rutrum fermentum. Integer pretium, turpis et pharetra.</string>
+    <string name="lorem_g">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed nisl vestibulum justo consequat suscipit vitae id erat. Integer aliquam, arcu laoreet condimentum facilisis, leo.</string>
+    <string name="lorem_gg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare nulla. Vestibulum nec nibh arcu. Nulla facilisi. Duis turpis nibh, sodales nec dapibus at, ultrices nec libero. Pellentesque eleifend mi lacus, hendrerit dignissim nisl suscipit ac. Aliquam id luctus metus. Vestibulum congue ipsum ac justo cursus, vel varius est venenatis. Nullam quis diam consectetur lacus pellentesque ultrices a id enim. Nunc efficitur ex ac sapien dictum semper ac sed mi. Donec porttitor sapien quis viverra ullamcorper. Nunc sodales ultricies malesuada. Nulla tristique ante quis ex aliquet, nec pulvinar nunc tempor. Nunc vulputate hendrerit diam, sed efficitur eros accumsan in. Interdum et malesuada fames ac ante ipsum primis in faucibus.</string>
+</resources>
