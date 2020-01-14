@@ -15,4 +15,5 @@
     <string name="animations">Animations</string>
     <string name="menu_title">Playground</string>
     <string name="menu_subtitle">Just4Fun</string>
+    <string name="menu_skelly_loading_animation">Skeleton Loading</string>
 </resources>

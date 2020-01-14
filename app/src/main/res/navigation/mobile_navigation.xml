@@ -22,4 +22,10 @@
         android:name="com.lucashos.playground.AnimationOnScrollingFragment"
         android:label="@string/menu_scrolling_animation"
         tools:layout="@layout/fragment_animation_on_scrolling" />
+
+    <fragment
+        android:id="@+id/nav_skelly"
+        android:name="com.lucashos.playground.SkellyLoadingFragment"
+        android:label="@string/menu_skelly_loading_animation"
+        tools:layout="@layout/fragment_skelly_loading" />
 </navigation>

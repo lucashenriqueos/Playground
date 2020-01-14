@@ -11,11 +11,11 @@ import com.lucashos.playground.databinding.FragmentParallaxBinding
 class ParallaxFragment : Fragment() {
     lateinit var binding: FragmentParallaxBinding
 
-    companion object {
-        fun newInstance(): ParallaxFragment = ParallaxFragment()
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_parallax, container, false)
         return binding.root
     }
