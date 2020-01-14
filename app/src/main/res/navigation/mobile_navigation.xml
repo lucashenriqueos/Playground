@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_overlap">
+
+    <fragment
+        android:id="@+id/nav_overlap"
+        android:name="com.lucashos.playground.OverlapFragment"
+        android:label="@string/menu_overlap_animation"
+        tools:layout="@layout/fragment_overlap" />
+
+    <fragment
+        android:id="@+id/nav_parallax"
+        android:name="com.lucashos.playground.ParallaxFragment"
+        android:label="@string/menu_parallax_animation"
+        tools:layout="@layout/fragment_parallax" />
+
+    <fragment
+        android:id="@+id/nav_scrolling"
+        android:name="com.lucashos.playground.AnimationOnScrollingFragment"
+        android:label="@string/menu_scrolling_animation"
+        tools:layout="@layout/fragment_animation_on_scrolling" />
+</navigation>
