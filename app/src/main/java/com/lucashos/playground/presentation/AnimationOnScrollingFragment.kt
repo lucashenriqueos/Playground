@@ -1,4 +1,4 @@
-package com.lucashos.playground
+package com.lucashos.playground.presentation
 
 import android.graphics.Rect
 import android.os.Bundle
@@ -9,6 +9,7 @@ import androidx.core.view.get
 import androidx.core.widget.NestedScrollView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.lucashos.playground.R
 import com.lucashos.playground.databinding.FragmentAnimationOnScrollingBinding
 import kotlinx.android.synthetic.main.fragment_animation_on_scrolling.*
 
@@ -16,11 +17,13 @@ class AnimationOnScrollingFragment : Fragment() {
     lateinit var binding: FragmentAnimationOnScrollingBinding
 
     companion object {
-        fun newInstance(): AnimationOnScrollingFragment = AnimationOnScrollingFragment()
+        fun newInstance(): AnimationOnScrollingFragment =
+            AnimationOnScrollingFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_animation_on_scrolling, container, false)
+        binding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_animation_on_scrolling, container, false)
         return binding.root
     }
 

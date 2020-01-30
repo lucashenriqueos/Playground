@@ -1,4 +1,4 @@
-package com.lucashos.playground
+package com.lucashos.playground.presentation
 
 import android.os.Bundle
 import android.util.TypedValue
@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.core.widget.NestedScrollView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.lucashos.playground.R
 import com.lucashos.playground.databinding.FragmentOverlapBinding
 import kotlin.math.abs
 
@@ -20,11 +21,13 @@ class OverlapFragment : Fragment() {
     var originalTextSize = 0f
 
     companion object {
-        fun newInstance(): OverlapFragment = OverlapFragment()
+        fun newInstance(): OverlapFragment =
+            OverlapFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_overlap, container, false)
+        binding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_overlap, container, false)
         resizeScrollView()
 //        addFadeOutOnScrolling()
         addTextResizeOnScrolling()
