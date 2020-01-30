@@ -7,19 +7,25 @@
 
     <fragment
         android:id="@+id/nav_overlap"
-        android:name="com.lucashos.playground.OverlapFragment"
+        android:name="com.lucashos.playground.presentation.OverlapFragment"
         android:label="@string/menu_overlap_animation"
         tools:layout="@layout/fragment_overlap" />
 
     <fragment
         android:id="@+id/nav_parallax"
-        android:name="com.lucashos.playground.ParallaxFragment"
+        android:name="com.lucashos.playground.presentation.ParallaxFragment"
         android:label="@string/menu_parallax_animation"
         tools:layout="@layout/fragment_parallax" />
 
     <fragment
         android:id="@+id/nav_scrolling"
-        android:name="com.lucashos.playground.AnimationOnScrollingFragment"
+        android:name="com.lucashos.playground.presentation.AnimationOnScrollingFragment"
         android:label="@string/menu_scrolling_animation"
         tools:layout="@layout/fragment_animation_on_scrolling" />
+
+    <fragment
+        android:id="@+id/nav_skelly"
+        android:name="com.lucashos.playground.presentation.SkellyLoadingFragment"
+        android:label="@string/menu_skelly_loading_animation"
+        tools:layout="@layout/fragment_skelly_loading" />
 </navigation>

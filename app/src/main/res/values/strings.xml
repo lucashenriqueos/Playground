@@ -15,4 +15,6 @@
     <string name="animations">Animations</string>
     <string name="menu_title">Playground</string>
     <string name="menu_subtitle">Just4Fun</string>
+    <string name="menu_skelly_loading_animation">Skeleton Loading</string>
+    <string name="euro_emoji">0x1F4B6</string>
 </resources>

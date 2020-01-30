@@ -17,6 +17,10 @@
             android:id="@+id/nav_overlap"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_overlap_animation" />
+        <item
+            android:id="@+id/nav_skelly"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_skelly_loading_animation" />
     </group>
 
 </menu>
