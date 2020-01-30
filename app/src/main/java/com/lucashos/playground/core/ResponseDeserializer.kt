@@ -44,12 +44,8 @@ class ResponseDeserializer : JsonDeserializer<Response<Any>> {
         statusCode: Int,
         json: JsonElement?,
         parameterizedType: ParameterizedType
-    ):Response<Any> = Response(
+    ): Response<Any> = Response(
         statusCode = statusCode,
-        header = gson.fromJson<Map<String, String>>(
-            json?.asJsonObject?.get("header"),
-            Map::class.java
-        ),
         data = gson.fromJson<Any>(
             json?.asJsonObject?.get("data"),
             parameterizedType.actualTypeArguments[0]
@@ -57,28 +53,4 @@ class ResponseDeserializer : JsonDeserializer<Response<Any>> {
     )
 
     val gson = GsonBuilder().create()
-//        override fun deserialize(
-//            json: JsonElement?,
-//            typeOfT: Type?,
-//            context: JsonDeserializationContext?
-//        ): Response<Any> {
-//            json?.takeIf {
-//                it.isJsonObject
-//            }.let {
-//                it as JsonObject
-//            }.takeIf {
-//                it.has("statusCode")
-//            }?.let {
-//                val statusCode = it.getSuccess("statusCode").asInt
-//                if (statusCode in 200..299) {
-//                    return gson.fromJson<Response<Any>>(json, Response::class.java)
-//                }
-//                val errorResponse = context?.deserialize<ErrorResponse>(it.getSuccess("data"), ErrorResponse::class.java)
-//                throw BackendException(
-//                    errorResponse?.title,
-//                    errorResponse!!
-//                )
-//            }
-//            throw JsonParseException("Error")
-//        }
 }

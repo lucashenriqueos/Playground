@@ -15,6 +15,8 @@ import com.google.android.material.navigation.NavigationView
 import com.lucashos.playground.R
 import com.lucashos.playground.core.BackendException
 import com.lucashos.playground.data.repotistory.MockyRepository
+import com.lucashos.playground.response.Response
+import com.lucashos.playground.response.SucessResponse
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -51,21 +53,18 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+
+
     @SuppressLint("CheckResult")
     fun getSuccess() {
         Log.d("X", "Sending success")
         MockyRepository.getSuccess()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                Log.d("X", it.statusCode.toString())
-                Log.d("X", it.data.printed_name)
-            }, {
-                if (it is BackendException) {
-                    Log.d("X", it.errorResponse.title)
-                } else
-                    Log.d("X", it.toString())
-            })
+            .subscribe(
+                { logSuccess(it) },
+                { logException(it) }
+            )
     }
 
     @SuppressLint("CheckResult")
@@ -74,14 +73,23 @@ class MainActivity : AppCompatActivity() {
         MockyRepository.getError()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                Log.d("X", it.statusCode.toString())
-                Log.d("X", it.data.printed_name)
-            }, {
-                if (it is BackendException) {
-                    Log.d("X", it.errorResponse.title)
-                } else
-                    Log.d("X", it.toString())
-            })
+            .subscribe(
+                { logSuccess(it) },
+                { logException(it) }
+            )
+    }
+
+    private fun logSuccess(it: Response<SucessResponse>) {
+        Log.d("X", "Success Response")
+        Log.d("X", it.statusCode.toString())
+        Log.d("X", it.data.printed_name)
+    }
+
+    private fun logException(it: Throwable?) {
+        Log.d("X", "Error Response")
+        if (it is BackendException) {
+            Log.d("X", it.errorResponse.title)
+        } else
+            Log.d("X", it.toString())
     }
 }
