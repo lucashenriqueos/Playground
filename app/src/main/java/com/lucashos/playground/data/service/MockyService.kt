@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 interface MockyService {
 
-    @GET("5e33097e32000078c894d386")
+    @GET("5e330fc7320000a16994d3b5")
     fun getSuccess(): Single<Response<SucessResponse>>
 
     @GET("5e330fc7320000a16994d3b5")

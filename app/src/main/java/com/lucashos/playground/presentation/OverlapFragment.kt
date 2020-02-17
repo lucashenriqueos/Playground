@@ -20,14 +20,15 @@ class OverlapFragment : Fragment() {
     var backgroundViewHeight = 0
     var originalTextSize = 0f
 
-    companion object {
-        fun newInstance(): OverlapFragment =
-            OverlapFragment()
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_overlap, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_overlap, container, false
+        )
         resizeScrollView()
 //        addFadeOutOnScrolling()
         addTextResizeOnScrolling()
@@ -48,7 +49,10 @@ class OverlapFragment : Fragment() {
 
     private fun resizeScrollView() {
         binding.root.viewTreeObserver.addOnGlobalLayoutListener {
-            val layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
+            val layoutParams = FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.MATCH_PARENT
+            )
             if (backgroundViewHeight == 0) backgroundViewHeight = binding.background.height
             layoutParams.topMargin = backgroundViewHeight
             binding.scrollContent.layoutParams = layoutParams

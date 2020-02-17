@@ -7,20 +7,24 @@
         android:title="@string/animations">
         <item
             android:id="@+id/nav_parallax"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_menu_send"
             android:title="@string/menu_parallax_animation" />
         <item
             android:id="@+id/nav_scrolling"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_menu_send"
             android:title="@string/menu_scrolling_animation" />
         <item
             android:id="@+id/nav_overlap"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_send"
             android:title="@string/menu_overlap_animation" />
         <item
             android:id="@+id/nav_skelly"
             android:icon="@drawable/ic_menu_send"
             android:title="@string/menu_skelly_loading_animation" />
+        <item
+            android:id="@+id/nav_bottomsheet"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/menu_bottomsheet" />
     </group>
 
 </menu>

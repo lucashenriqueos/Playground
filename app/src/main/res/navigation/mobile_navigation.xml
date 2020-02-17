@@ -28,4 +28,10 @@
         android:name="com.lucashos.playground.presentation.SkellyLoadingFragment"
         android:label="@string/menu_skelly_loading_animation"
         tools:layout="@layout/fragment_skelly_loading" />
+
+    <fragment
+        android:id="@+id/nav_bottomsheet"
+        android:name="com.lucashos.playground.presentation.BottomSheetFragment"
+        android:label="@string/menu_bottomsheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
 </navigation>

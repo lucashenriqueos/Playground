@@ -1,6 +1,6 @@
 package com.lucashos.playground.response
 
-class SucessResponse (
-    val id: Int,
-    val printed_name: String
-)
+data class SucessResponse (
+    val id: Int = 0,
+    val printed_name: String = ""
+): ErrorResponse()
