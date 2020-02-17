@@ -7,8 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -21,11 +21,12 @@
             android:text="@string/lorem_p" />
     </LinearLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        app:layout_behavior="@string/bottom_sheet_behavior">
+        app:layout_behavior=".presentation.CustomBottomSheetBehaviour">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,18 +53,36 @@
                 android:layout_height="wrap_content"
                 android:text="@string/lorem_gg" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_gg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_gg" />
+
             <Button
                 android:id="@+id/bottomSheetButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
                 android:paddingStart="10dp"
-                android:paddingEnd="10dp" />
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp" />
+
+            <Button
+                android:id="@+id/botaoteste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:visibility="invisible" />
 
         </LinearLayout>
-
-
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

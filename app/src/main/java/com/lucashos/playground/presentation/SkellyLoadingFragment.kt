@@ -37,7 +37,6 @@ class SkellyLoadingFragment : Fragment() {
     private fun hideLoading() {
         shimmer_view_container.stopShimmer()
         shimmer_view_container.isVisible = false
-        textView.text = getEmoji(getString(R.string.euro_emoji))
         textView.isVisible = true
     }
 
@@ -45,13 +44,5 @@ class SkellyLoadingFragment : Fragment() {
         shimmer_view_container.startShimmer()
         shimmer_view_container.isVisible = true
         textView.isVisible = false
-    }
-
-    private fun getEmoji(unicode: String): String {
-        return String(Character.toChars(unicode.toInt()))
-    }
-
-    companion object {
-        const val EMOJI = 0x1F4B6
     }
 }

@@ -21,8 +21,18 @@ class BottomSheetFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        bottomSheetButton.setOnClickListener {
-            Toast.makeText(context, "Clicou", Toast.LENGTH_SHORT).show()
+        bottomSheetButton.setOnClickListener(toast())
+
+        scroll.setOnScrollChangeListener { _, scrollX, scrollY, _, _ ->
+
+        }
+
+        botaoteste.setOnClickListener(toast("Invisivel"))
+    }
+
+    private fun toast(message: String = "Clicou"): (View) -> Unit {
+        return {
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
         }
     }
 }
